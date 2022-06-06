@@ -17,26 +17,45 @@ Suppose you have 2 cards '10 & 6' and you ask for another one and you get '6'. n
 // 2. reassign the message variable to the string we are logging out
 // 3. log it out
 
+// 1. create a function startGame()
+// 2. move the conditions inside function
 
-let firstCard = 7;
+// 1. store the message-el paragraph in variable messageEl
+// 2. display the message in message-el using message-el.textContent
+
+// 1. store the sum paragraph in a variable called sumEl
+// 2. render the sum on the page using this format -> "Sum: 14"
+
+// 1. store the cards paragraph in a variable called cardsEl
+// 2. render the sum on the page using this format -> "Sum: 10 14"
+
+let firstCard = 10;
 let secondCard = 11;
 let sum = firstCard + secondCard
 let hasBlackJack = false
 let isAlive = true
 let message = ""
+let messageEl = document.getElementById("message-el")
+let sumEl = document.getElementById("sum-el")
+//let sumEl = document.querySelector("#sum-el")
+let cardsEl = document.getElementById("cards-el")
 
-if (sum <= 20) {
-    message = 'Do you want to draw a new card? 🙂'
+function startGame() {
+    sumEl.textContent = "sum: "  + sum
+    cardsEl.textContent = "Cards: "  + firstCard + " " + secondCard
+    if (sum <= 20) {
+        message = 'Do you want to draw a new card?'
+    }
+    
+    else if (sum == 21) {
+        message = 'You have got a Blackjack!'
+        hasBlackJack = true
+    }
+    
+    else {
+        message = 'You are out of the game'
+        isAlive = false
+    }
+    messageEl.textContent = message
+    
 }
-
-else if (sum == 21) {
-    message = 'You have got a Blackjack! 🥳'
-    hasBlackJack = true
-}
-
-else {
-    message = 'You are out of the game 😭'
-    isAlive = false
-}
-
-console.log(message)
