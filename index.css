@@ -24,14 +24,36 @@ div {
 
 h1 {
     padding-top: 15%;
-    font-size: 3rem;
+    font-size: 4rem;
     color: goldenrod;
 }
 
 p {
-    padding-top: 8%;
-    font-size: 1.4rem;
+    padding-top: 7%;
+    font-size: 1.5rem;
 }
 #message-el {
     font-style: italic;
+}
+
+button {
+    color: #016f32;
+    width: 170px;
+    background-color: goldenrod;
+    padding: 15px;
+    margin: 6%;
+    border: none;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    padding: 18px;
+    width: 180px;
+    background-color: #016f32;
+    border: 1px solid goldenrod;
+    border-radius: 5px;
+    color: goldenrod;
+    
 }
