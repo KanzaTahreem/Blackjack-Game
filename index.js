@@ -29,8 +29,30 @@ Suppose you have 2 cards '10 & 6' and you ask for another one and you get '6'. n
 // 1. store the cards paragraph in a variable called cardsEl
 // 2. render the sum on the page using this format -> "Sum: 10 14"
 
+// 1. create a runNewCard() function that logs out "drawing a new card from deck"
+
+// 1. create a card variable in runNewCard and hard code its va;ue to a number(2 - 11)
+// 2. add the new card to the sum variable
+// 3. Call startGame
+
+// 1. rename startGame() function as renderGame() only in js.
+// 2. create a startGame() function that calls renderGame()
+
+// till now no matter how many times we click on new card, we will always get first and second card
+// this is because of 'cardsEl.textContent = "Cards: "  + firstCard + " " + secondCard'
+// we need to store all of our variables in one card. for this we'll use an array.
+
+// as the newCard is created and added to the sum. now push the newCard to the cards array.
+
+// 1. create a for loop that renders out all the cards in the cards array instead of just two cards
+
+
+
+
+
 let firstCard = 10;
-let secondCard = 11;
+let secondCard = 4;
+let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 let hasBlackJack = false
 let isAlive = true
@@ -40,9 +62,21 @@ let sumEl = document.getElementById("sum-el")
 //let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.getElementById("cards-el")
 
+
+
 function startGame() {
+    renderGame()
+}
+
+
+
+function renderGame() {
+    cardsEl.textContent = "Cards: " 
+    for (let i = 0; i < cards.length; i++ ){
+        cardsEl.textContent += cards[i] + " "
+    }
+
     sumEl.textContent = "sum: "  + sum
-    cardsEl.textContent = "Cards: "  + firstCard + " " + secondCard
     if (sum <= 20) {
         message = 'Do you want to draw a new card?'
     }
@@ -59,3 +93,16 @@ function startGame() {
     messageEl.textContent = message
     
 }
+
+function runNewCard(){
+    
+    let card = 7
+    
+    sum += card
+    cards.push(card)
+
+    renderGame()
+}
+
+
+
