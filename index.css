@@ -5,7 +5,7 @@
 }
 
 body {
-   background-color: rgb(163, 206, 163);
+    background-color: rgb(163, 206, 163);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     color: white;
@@ -17,7 +17,7 @@ div {
     background-image: url(table.png);
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 50px 25%;
+    margin: 5% 25%;
     height: 100vh;
     border-radius: 15px;
 }
@@ -32,9 +32,12 @@ p {
     padding-top: 7%;
     font-size: 1.5rem;
 }
+
 #message-el {
     font-style: italic;
+    font-size: 1.8rem;
 }
+
 #sum-el {
     padding-bottom: 5%;
 }
@@ -60,5 +63,6 @@ button:hover {
     border: 1px solid goldenrod;
     border-radius: 5px;
     color: goldenrod;
-    
+    cursor: pointer;
 }
+
