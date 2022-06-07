@@ -100,7 +100,7 @@ function startGame() {
     let secondCard = getRandomCard()
     cards = [firstCard, secondCard]
     sum = firstCard + secondCard
-    
+ 
     renderGame()
 }
 
@@ -115,7 +115,6 @@ function getRandomCard(){
     else {
         return randomNumber
     }
-    
 }
 
 function renderGame() {
@@ -130,31 +129,33 @@ function renderGame() {
     }
     
     else if (sum == 21) {
-        message = 'You have got a Blackjack!'
+        message = 'Wohoo! You have got a Blackjack!'
         hasBlackJack = true
     }
     
     else {
-        message = 'You are out of the game'
+        message = 'You are out of the game!'
         isAlive = false
     }
     messageEl.textContent = message
     
+    if (isAlive == false) {
+        messageEl.style.color = "orangered"
+
+    }
+    else {
+        messageEl.style.color = "white"
+    }
 }
 
 function runNewCard(){
-     
-
     if (isAlive == true &&  hasBlackJack == false) {
-    
     let card = getRandomCard()
-    
     sum += card
     cards.push(card)
-
+        
     renderGame()
-    }
-    
+    }  
 }
 
 
