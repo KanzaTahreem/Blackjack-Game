@@ -61,6 +61,11 @@ Suppose you have 2 cards '10 & 6' and you ask for another one and you get '6'. n
 // 3. cards array shouls not be set before game start
 // 4. same with the sum. assign sum to zero
 
+// after the game is over, we are still getting a new card + we can start the game with one card.
+// we need to fix this
+
+// 1. only allow the player to get a new card if he is alive and doesnot have a blackjack
+
 
 
 let cards = []
@@ -124,6 +129,9 @@ function renderGame() {
 }
 
 function runNewCard(){
+     
+
+    if (isAlive == true &&  hasBlackJack == false) {
     
     let card = getRandomCard()
     
@@ -131,6 +139,8 @@ function runNewCard(){
     cards.push(card)
 
     renderGame()
+    }
+    
 }
 
 
