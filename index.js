@@ -66,6 +66,12 @@ Suppose you have 2 cards '10 & 6' and you ask for another one and you get '6'. n
 
 // 1. only allow the player to get a new card if he is alive and doesnot have a blackjack
 
+// now we will add name and credits you have
+
+// variables which are inhertitly connected togeter (player and chips) are assigned in two different variables
+// combine player name and chips. that when "objects" come into play
+
+
 
 
 let cards = []
@@ -77,6 +83,13 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 //let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.getElementById("cards-el")
+let player = {
+    'name' : 'Ruben',
+    'chips' : 200
+}
+
+let playerEl = document.getElementById("player-el")
+playerEl.textContent = player.name + ": $" + player.chips
 
 console.log(cards)
 
