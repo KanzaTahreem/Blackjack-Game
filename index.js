@@ -46,12 +46,18 @@ Suppose you have 2 cards '10 & 6' and you ask for another one and you get '6'. n
 
 // 1. create a for loop that renders out all the cards in the cards array instead of just two cards
 
+// we have hard cord values (assign values) to first and second card. Also fix the value of card.
+// 1. create a function getRandomCard() that returns a random number
+// 2. use getRandomCard() to set the values of first card and second card and card as well
 
 
 
 
-let firstCard = 10;
-let secondCard = 4;
+
+
+
+let firstCard = getRandomCard()
+let secondCard = getRandomCard()
 let cards = [firstCard, secondCard]
 let sum = firstCard + secondCard
 let hasBlackJack = false
@@ -68,7 +74,9 @@ function startGame() {
     renderGame()
 }
 
-
+function getRandomCard(){
+    return Math.random()
+}
 
 function renderGame() {
     cardsEl.textContent = "Cards: " 
@@ -96,7 +104,7 @@ function renderGame() {
 
 function runNewCard(){
     
-    let card = 7
+    let card = getRandomCard()
     
     sum += card
     cards.push(card)
