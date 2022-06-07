@@ -75,7 +75,7 @@ function startGame() {
 }
 
 function getRandomCard(){
-    return Math.random()
+    return Math.floor(Math.random())
 }
 
 function renderGame() {
