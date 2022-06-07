@@ -71,9 +71,15 @@ Suppose you have 2 cards '10 & 6' and you ask for another one and you get '6'. n
 // variables which are inhertitly connected togeter (player and chips) are assigned in two different variables
 // combine player name and chips. that when "objects" come into play
 
+// 1. Create player object and assign it two properties; name and chips
+// 2. store player in variable called playerEl
+// 3. render player name and chips in playerEl using textContent 
 
 
-
+let player = {
+    'name' : 'Ruben',
+    'chips' : 200
+}
 let cards = []
 let sum = 0
 let hasBlackJack = false
@@ -83,15 +89,10 @@ let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 //let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.getElementById("cards-el")
-let player = {
-    'name' : 'Ruben',
-    'chips' : 200
-}
-
 let playerEl = document.getElementById("player-el")
+
 playerEl.textContent = player.name + ": $" + player.chips
 
-console.log(cards)
 
 function startGame() {
     isAlive = true 
