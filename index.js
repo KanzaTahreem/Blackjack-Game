@@ -54,25 +54,34 @@ Suppose you have 2 cards '10 & 6' and you ask for another one and you get '6'. n
 // if 1 -> 11
 // if 11 - 13 -> 10
 
+// if we console.log below assigned variables. that means as you enter the casino, the game has already started.
+// we do not want that. we want the game to be started as we click on START GAME. so
+// 1. assign firstCard and secondCard and sum inside startGame ()
+// 2. set isAlive to false then reassign it to true inside startGame ()
+// 3. cards array shouls not be set before game start
+// 4. same with the sum. assign sum to zero
 
 
 
-
-let firstCard = getRandomCard()
-let secondCard = getRandomCard()
-let cards = [firstCard, secondCard]
-let sum = firstCard + secondCard
+let cards = []
+let sum = 0
 let hasBlackJack = false
-let isAlive = true
+let isAlive = false
 let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 //let sumEl = document.querySelector("#sum-el")
 let cardsEl = document.getElementById("cards-el")
 
-
+console.log(cards)
 
 function startGame() {
+    isAlive = true 
+    let firstCard = getRandomCard()
+    let secondCard = getRandomCard()
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
+    
     renderGame()
 }
 
