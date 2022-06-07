@@ -50,7 +50,9 @@ Suppose you have 2 cards '10 & 6' and you ask for another one and you get '6'. n
 // 1. create a function getRandomCard() that returns a random number
 // 2. use getRandomCard() to set the values of first card and second card and card as well
 
-
+// 1. modify the cards as
+// if 1 -> 11
+// if 11 - 13 -> 10
 
 
 
@@ -75,7 +77,17 @@ function startGame() {
 }
 
 function getRandomCard(){
-    return Math.floor(Math.random() * 13) + 1 
+    let randomNumber = Math.floor(Math.random() * 13) + 1 
+    if (randomNumber > 10) {
+        return 10
+    }
+    else if (randomNumber == 1) {
+        return 11
+    }
+    else {
+        return randomNumber
+    }
+    
 }
 
 function renderGame() {
