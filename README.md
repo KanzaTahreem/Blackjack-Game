@@ -1,7 +1,6 @@
 # Blackjack Game
 
-> A simple blackjack game. The main focus is not on the HTML/CSS but on the JavaScript.
-
+> A simple blackjack game built with JavaScript.
 ## Built With
 
 - HTML
